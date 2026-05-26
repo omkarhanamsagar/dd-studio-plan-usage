@@ -4,6 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>DD Studio Plan &amp; Usage Page — Prototypes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
         <style>
             :root {
                 --ui-background: #ffffff;
@@ -27,7 +37,7 @@
 
             body {
                 font-family:
-                    'NotoSans', 'Lucida Grande', 'Lucida Sans Unicode',
+                    'Noto Sans', 'Lucida Grande', 'Lucida Sans Unicode',
                     sans-serif;
                 color: var(--ui-text);
                 background: var(--ui-background-secondary);
@@ -64,8 +74,38 @@
                 font-size: 15px;
                 line-height: 22.5px;
                 color: var(--ui-text-secondary);
-                margin-bottom: 40px;
+                margin-bottom: 24px;
                 max-width: 640px;
+            }
+
+            .credits {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px 32px;
+                margin-bottom: 40px;
+                padding: 16px 0;
+                border-top: 1px solid var(--ui-border);
+                border-bottom: 1px solid var(--ui-border);
+            }
+
+            .credits__row {
+                display: inline-flex;
+                align-items: baseline;
+                gap: 8px;
+            }
+
+            .credits__label {
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: var(--ui-text-tertiary);
+            }
+
+            .credits__value {
+                font-size: 13px;
+                font-weight: 500;
+                color: var(--ui-text);
             }
 
             .cards {
@@ -162,27 +202,29 @@
 
             .meta {
                 display: flex;
-                flex-wrap: wrap;
-                gap: 16px 24px;
+                flex-direction: column;
+                gap: 8px;
                 margin-top: 48px;
                 padding-top: 24px;
                 border-top: 1px solid var(--ui-border);
+            }
+
+            .meta__note {
+                font-size: 13px;
+                line-height: 19.5px;
+                color: var(--ui-text-secondary);
+                max-width: 720px;
+            }
+
+            .meta__note strong {
+                font-weight: 600;
+                color: var(--ui-text);
+            }
+
+            .meta__note--muted {
                 font-size: 12px;
                 line-height: 18px;
                 color: var(--ui-text-tertiary);
-            }
-
-            .meta__item {
-                display: inline-flex;
-                align-items: center;
-                gap: 6px;
-            }
-
-            .meta__dot {
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background: #2c7b35;
             }
         </style>
     </head>
@@ -193,11 +235,23 @@
             <h1>DD Studio Plan &amp; Usage Page</h1>
             <p class="subtitle">
                 Hi-fi prototypes of the Studio Plan &amp; Usage page for both
-                Free and Premium plans. These are interactive — try the slider
-                presets in the bottom-right Prototype Controls panel, toggle
-                the end-of-month forecast, and switch the Investigate
-                section's time range and sort order.
+                Free and Premium plans.
             </p>
+
+            <div class="credits">
+                <div class="credits__row">
+                    <span class="credits__label">Designer</span>
+                    <span class="credits__value">Omkar Hanamsagar</span>
+                </div>
+                <div class="credits__row">
+                    <span class="credits__label">Design mentor</span>
+                    <span class="credits__value">Monica Chen</span>
+                </div>
+                <div class="credits__row">
+                    <span class="credits__label">Timeline</span>
+                    <span class="credits__value">February – April 2026</span>
+                </div>
+            </div>
 
             <div class="cards">
                 <a class="card" href="./free.html">
@@ -249,13 +303,16 @@
             </div>
 
             <div class="meta">
-                <span class="meta__item">
-                    <span class="meta__dot"></span>
-                    Static HTML — no backend, all data is mocked
-                </span>
-                <span class="meta__item">
-                    Best viewed on desktop at 1280px+
-                </span>
+                <p class="meta__note">
+                    <strong>Note:</strong> the floating "Prototype Controls"
+                    panel in the bottom-right of each prototype is meta — it's
+                    only there to simulate different usage states for review,
+                    and is not part of the production design.
+                </p>
+                <p class="meta__note meta__note--muted">
+                    Best viewed on desktop at 1280px+. All data is mocked;
+                    there is no backend.
+                </p>
             </div>
         </main>
     </body>
