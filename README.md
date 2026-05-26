@@ -2,6 +2,14 @@
 
 Hi-fi static-HTML prototypes of the Datadog Studio Plan & Usage page, hosted via GitHub Pages for stakeholder review.
 
+**Live site:** https://omkarhanamsagar.github.io/dd-studio-plan-usage/
+
+## Credits
+
+- **Designer** — Omkar Hanamsagar
+- **Design mentor** — Monica Chen
+- **Timeline** — February – April 2026
+
 ## Pages
 
 - **Landing** — `index.html`
@@ -26,8 +34,7 @@ python3 -m http.server 8080
 ## Notes
 
 - All data is mocked. No backend.
-- Use the floating **Prototype Controls** panel (bottom-right of each prototype) to swap data presets or drive individual product usage with sliders.
-- The "Show end-of-month forecast" toggle and the time-range / sort-by controls in the Investigate section are interactive.
+- The floating **Prototype Controls** panel in the bottom-right of each prototype is meta — it's only there to simulate different usage states for review, and is not part of the production design.
 - Best viewed on desktop at ≥1280px.
 
 ## Source
@@ -39,3 +46,5 @@ packages/apps/quick-start/toolkit/page-quick-start/components/products/usage-pla
   ├── usage-overview-prototype-hifi.html         → free.html
   └── usage-overview-prototype-hifi-premium.html → premium.html
 ```
+
+This standalone repo is a one-way snapshot — to refresh it, re-copy from the monorepo and push.
