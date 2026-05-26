@@ -4,40 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>HIFI - PREMIUM</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
         <style>
-            /* ── DRUIDS Font Faces ── */
-            @font-face {
-                font-family: 'NotoSans';
-                font-style: normal;
-                font-weight: 400;
-                src:
-                    url('../../../../../../../../packages/druids/ui/internals/fonts/NotoSans-Regular-webfont.woff2')
-                        format('woff2'),
-                    url('../../../../../../../../packages/druids/ui/internals/fonts/NotoSans-Regular-webfont.woff')
-                        format('woff');
-            }
-
-            @font-face {
-                font-family: 'NotoSans';
-                font-style: normal;
-                font-weight: 600;
-                src:
-                    url('../../../../../../../../packages/druids/ui/internals/fonts/NotoSans-Bold-webfont.woff2')
-                        format('woff2'),
-                    url('../../../../../../../../packages/druids/ui/internals/fonts/NotoSans-Bold-webfont.woff')
-                        format('woff');
-            }
-
-            @font-face {
-                font-family: 'NotoSans';
-                font-style: italic;
-                font-weight: 400;
-                src:
-                    url('../../../../../../../../packages/druids/ui/internals/fonts/NotoSans-Italic-webfont.woff2')
-                        format('woff2'),
-                    url('../../../../../../../../packages/druids/ui/internals/fonts/NotoSans-Italic-webfont.woff')
-                        format('woff');
-            }
+            /* ── DRUIDS Font (Noto Sans via Google Fonts; original DRUIDS @font-face paths
+                  pointed at monorepo-only assets that don't exist in this standalone repo) ── */
 
             /* ── DRUIDS Design Tokens ── */
             :root {
@@ -71,7 +50,7 @@
 
                 /* Typography */
                 --font-family-base:
-                    'NotoSans', 'Lucida Grande', 'Lucida Sans Unicode',
+                    'Noto Sans', 'Lucida Grande', 'Lucida Sans Unicode',
                     sans-serif;
             }
 
